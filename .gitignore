@@ -1,0 +1,4 @@
+node_modules
+test
+.env-example
+app/routes/routes.js
