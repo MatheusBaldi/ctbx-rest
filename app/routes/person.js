@@ -6,11 +6,17 @@ const router = express.Router();
 // Get all
 router.get('/', PersonController.index);
 
-// Create one
+// Store one
 router.post('/', PersonController.store);
 
+// // Show one
+// router.get('/:id', PersonController.show);
+
+// // Edit one
+// router.get('/:id/edit', PersonController.edit);
+
 // Update one
-router.put('/:id', PersonController.update)
+router.put('/:id', PersonController.update);
 
 // Delete one
 router.delete('/:id', PersonController.destroy);
