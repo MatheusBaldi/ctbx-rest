@@ -12,3 +12,7 @@
   const Person = mongoose.model('Person', personSchema);
 
   module.exports.Person = Person;
+
+  // Criar regras de inconsistência
+  // soma das participações não pode passar de 100%
+  // 

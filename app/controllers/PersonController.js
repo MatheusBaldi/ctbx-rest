@@ -2,13 +2,13 @@ const Person = require('../models/Person');
 
 class PersonController{
     // Get all
-    index(req, res){
-        let persons = Person.find();
-        res.send(posts.find({}).toArray()); 
+    static index(req, res){
+        let persons = Person.find().exec();
+        res.send(persons.toArray()); 
     }
     
     // Store one
-    store(req, res){
+    static store(req, res){
         Person.create({
             name:{
                 first: req.body.name.first,
@@ -29,9 +29,11 @@ class PersonController{
     // update(){}
     
     // Delete one
-    destroy(req, res){
+    static destroy(req, res){
         Person.findByIdAndDelete(req.params.id);
         res.status(200).send();
     }
 
 }
+
+module.exports = PersonController;

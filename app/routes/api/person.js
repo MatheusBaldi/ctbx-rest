@@ -1,5 +1,5 @@
 const express = require('express');
-const PersonController = require('../controllers/PersonController');
+const PersonController = require('../../controllers/PersonController');
 
 const router = express.Router();
 
@@ -15,8 +15,10 @@ router.post('/', PersonController.store);
 // // Edit one
 // router.get('/:id/edit', PersonController.edit);
 
-// Update one
-router.put('/:id', PersonController.update);
+// // Update one
+// router.put('/:id', PersonController.update);
 
 // Delete one
 router.delete('/:id', PersonController.destroy);
+
+module.exports = router;
